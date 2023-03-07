@@ -1,24 +1,34 @@
 import logo from './logo.svg';
+import '@picocss/pico'
 import './App.css';
+import Login from './components/Login';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+} from "react-router-dom";
+import Profile from './components/Profile';
+import Nav from './components/Nav';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
+import About from './components/About';
+import Choices from './components/Choices';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <Nav />
+        <Routes>
+          <Route exact path="/" element={<Login />} />
+          <Route exact path="/profile" element={<Profile />} />
+          <Route exact path="/contact" element={<Contact />} />
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/choices" element={<Choices />} />
+        </Routes>
+      </Router>
+      <Footer />
+    </>
   );
 }
 
