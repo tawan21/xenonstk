@@ -1,4 +1,4 @@
-# Web app developed for XenonStack Technical Task [LINK](https://www.xenonstk.vercel.app)
+# Web app developed for XenonStack Technical Task
 
 ## Tech used: MERN + PicoCSS + JWT auth + Vercel for deploying
 
