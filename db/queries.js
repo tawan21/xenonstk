@@ -1,5 +1,5 @@
 const express = require('express');
-const Query = require('./models/Query');
+const Query = require('../models/Query');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const { default: mongoose } = require('mongoose');

@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
-const Sport = require('./models/Sport')
+const Sport = require('../models/Sport')
 
 router.post('/create', [
   body('email', 'Email invalid').isEmail(),

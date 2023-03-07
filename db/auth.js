@@ -1,11 +1,11 @@
 const express = require('express');
-const User = require('./database/models/User');
+const User = require('../models/User');
 const router = express.Router();
 const { body, validationResult } = require('express-validator');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const JWT_SECRET = process.env.SECRET_KEY;
-const fetchuser = require('./database/fetchuser');
+const fetchuser = require('./fetchuser');
 
 router.post('/createuser', [
   body('email', 'Enter a valid email').isEmail(),
